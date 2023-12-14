@@ -15,12 +15,12 @@ forward ConvertStrToInt(str[]);
 
 forward StringSize(str[]);
 
-forward bool:IsStrEqual(str[], str2[]);
+forward bool:IsEqual(str[], str2[]);
 
 forward StrClone(str[], str2[]);
 
 /*
-Convert a string to a Integer number
+Convert a string to a Integer number.
 WARNING: If there are some letters in the string, maybe can occur some bugs
 
 Usage:
@@ -47,7 +47,7 @@ public ConvertStrToInt(str[]) {
 }
 
 /*
-Get the string size
+Get the string size.
 
 Usage:
 StringSize(MyString[0]) *Will return the amount of characters*
@@ -77,7 +77,7 @@ public StringSize(str[]) {
 Compare 2 Strings.
 
 Usage:
-IsStrEqual(MyString[0], MySecondString[0]) *If this 2 strings are the exatly the same, will return true*
+IsEqual(MyString[0], MySecondString[0]) *If this 2 strings are the exatly the same, will return true*
 
 Example:
 new StrEx1[7];
@@ -86,13 +86,13 @@ new StrEx2[7];
 StrClone(StrEx1[0], "Hello");
 StrClone(StrEx2[0], "Hello");
 
-if(IsStrEqual(StrEx1[0], StrEx1[0])) 
+if(IsEqual(StrEx1[0], StrEx1[0])) 
 {
 	//this block will be executed
 }
 */
 
-public bool:IsStrEqual(str[], str2[]) {
+public bool:IsEqual(str[], str2[]) {
 	new str1size = StringSize(str[0]), str2size = StringSize(str2[0]);
 
 	if(str1size != str2size) return false;
