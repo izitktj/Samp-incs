@@ -1,6 +1,6 @@
 /* StrOps
  *
- * (c) Copyright 2023, unnietktj
+ * (c) Copyright 2023, izitktj
  * This file is provided as is (no warranties).
  */
 
