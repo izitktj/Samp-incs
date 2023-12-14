@@ -17,6 +17,8 @@ forward StringSize(str[]);
 
 forward bool:IsStrEqual(str[], str2[]);
 
+forward StrClone(str[], str2[]);
+
 /*
 Convert a string to a Integer number
 WARNING: If there are some letters in the string, maybe can occur some bugs
@@ -25,10 +27,9 @@ Usage:
 ConvertStrToInt(MyString[0]) *Will return a integer number*
 
 Example:
-new StrEx[3];
-StrEx[0] = '3';
-StrEx[1] = '4';
-StrEx[2] = 0; //String end
+new StrEx1[3];
+
+StrClone(StrEx1[0], "34");
 
 if(ConvertStrToInt(StrEx[0]) == 34) 
 {
@@ -52,7 +53,9 @@ Usage:
 StringSize(MyString[0]) *Will return the amount of characters*
 
 Example:
- !PSEUDO CODE ! StrEx = "Hello";
+new StrEx1[7];
+
+StrClone(StrEx1[0], "Hello");
 
 if(StringSize(StrEx[0]) == 5) 
 {
@@ -77,8 +80,11 @@ Usage:
 IsStrEqual(MyString[0], MySecondString[0]) *If this 2 strings are the exatly the same, will return true*
 
 Example:
- !PSEUDO CODE ! StrEx1 = "Hello";
- !PSEUDO CODE ! StrEx2 = "Hello";
+new StrEx1[7];
+new StrEx2[7];
+
+StrClone(StrEx1[0], "Hello");
+StrClone(StrEx2[0], "Hello");
 
 if(IsStrEqual(StrEx1[0], StrEx1[0])) 
 {
@@ -95,5 +101,31 @@ public bool:IsStrEqual(str[], str2[]) {
 		if(str[i] != str2[i]) return false;
 	}
 
+
+
 	return true;
+}
+
+/*
+Copy a string to another.
+
+Usage:
+public StrClone(MyString[0], MySecondString[0]) *Copy the content of the "MySecondString[]" to "MyString[]"*
+public StrClone(MyString[0], "My Text") *Copy the text "My Text" to "MyString[]"*
+
+Example:
+new StrEx1[7];
+
+StrClone(StrEx1[0], "Hello");
+
+print(StrEx1[0]); //will output "Hello"
+*/
+
+public StrClone(str[], str2[]) {
+	new str2size = StringSize(str2[0]);
+
+	for(new i = 0; i < str2size; i++) {
+		str[i] = str2[i];
+	}
+	return 1;
 }
