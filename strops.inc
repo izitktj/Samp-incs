@@ -87,7 +87,7 @@ if(IsStrEqual(StrEx1[0], StrEx1[0]))
 */
 
 public bool:IsStrEqual(str[], str2[]) {
-	new str1size = StringSize(str[]), str2size = StringSize(str2[]);
+	new str1size = StringSize(str[0]), str2size = StringSize(str2[0]);
 
 	if(str1size != str2size) return false;
 
