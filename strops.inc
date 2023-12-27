@@ -122,9 +122,9 @@ print(StrEx1[0]); //will output "Hello"
 */
 
 public StrClone(str[], str2[]) {
-	new strsize = StringSize(str[0]);
+	new strsize2 = StringSize(str2[0]);
 
-	for(new i = 0; i < strsize; i++) {
+	for(new i = 0; i < strsize2; i++) {
 		str[i] = str2[i];
 	}
 	return 1;
