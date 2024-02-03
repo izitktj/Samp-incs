@@ -5,11 +5,11 @@ official repo of my SAMP includes
 
 * `ConvertStrToInt` - Convert a string to a Integer number.
 
-* `StringSize` - Convert a string to a Integer number.
+* `StringSize` - Return the string size in a Integer.
 
-* `IsEqual` - Convert a string to a Integer number.
+* `IsEqual` - Compare 2 strings.
 
-* `StrClone` - Convert a string to a Integer number.
+* `StrClone` - Copy a string to another.
 
 # Examples
 
@@ -30,7 +30,7 @@ new StrEx1[7];
 
 StrClone(StrEx1[0], "Hello");
 
-if(StringSize(StrEx[0]) == 5) 
+if(StringSize(StrEx1[0]) == 5) 
 {
 	//this block will be executed
 }
@@ -43,7 +43,7 @@ new StrEx1[3];
 
 StrClone(StrEx1[0], "34");
 
-if(ConvertStrToInt(StrEx[0]) == 34) 
+if(ConvertStrToInt(StrEx1[0]) == 34) 
 {
 	//this block will be executed
 }
@@ -58,7 +58,7 @@ new StrEx2[7];
 StrClone(StrEx1[0], "Hello");
 StrClone(StrEx2[0], "Hello");
 
-if(IsEqual(StrEx1[0], StrEx1[0])) 
+if(IsEqual(StrEx1[0], StrEx2[0])) 
 {
 	//this block will be executed
 }
